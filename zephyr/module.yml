@@ -1,0 +1,4 @@
+name: zmk-keyboard-splity58
+build:
+  settings:
+    board_root: .
