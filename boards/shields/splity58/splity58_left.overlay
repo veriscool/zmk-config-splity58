@@ -23,7 +23,19 @@
             , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+
+    encoders {
+        compatible = "zmk,encoders";
+        encoder0: encoder_0 {
+            gpios = <&pro_micro 21 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                    <&ro_micro 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "ENCODER_0";
+        };
+    };
+
+    
 };
+
 
 &physical_layout_splity58 {
     kscan = <&kscan0>;
