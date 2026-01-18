@@ -25,13 +25,13 @@
         compatible = "gpio-leds";
         status = "okay";
         led0: led_0 {
-            gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // red LED, connected to P0.26
+            gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;  // red LED, connected to P0.26
         };
         led1: led_1 {
-            gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // green LED, connected to P0.30
+            gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;  // green LED, connected to P0.30
         };
         led2: led_2 {
-            gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // blue LED, connected to P0.06
+            gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  // blue LED, connected to P0.06
         };
     };
 };
