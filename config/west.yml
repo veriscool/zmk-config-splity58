@@ -8,8 +8,6 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: caksoylar  # <-- new entry
       url-base: https://github.com/caksoylar
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,8 +15,5 @@ manifest:
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
       revision: main
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: v0.3
   self:
     path: config
