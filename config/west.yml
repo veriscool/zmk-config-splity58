@@ -19,6 +19,6 @@ manifest:
       revision: main
     - name: snake-module                          # <--- and these
       remote: joaopedropio                        # <---
-      revision: master
+      revision: zephyr-4.1
   self:
     path: config
