@@ -8,6 +8,8 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: caksoylar  # <-- new entry
       url-base: https://github.com/caksoylar
+    - name: joaopedropio                          # <--- add these
+      url-base: https://github.com/joaopedropio
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,5 +17,8 @@ manifest:
     - name: zmk-rgbled-widget  # <-- new entry
       remote: caksoylar
       revision: main
+    - name: snake-module                          # <--- and these
+      remote: joaopedropio                        # <---
+      revision: master
   self:
     path: config

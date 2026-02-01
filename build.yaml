@@ -21,7 +21,7 @@
 include:
 
   - board: nice_nano_v2
-    shield: splity58_dongle
+    shield: splity58_dongle snake_adapter
 
   - board: nice_nano_v2
     shield: splity58_left
