@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: main
+    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -19,6 +19,6 @@ manifest:
       revision: main
     - name: snake-module                          # <--- and these
       remote: joaopedropio                        # <---
-      revision: master
+      revision: zephyr-4.1
   self:
     path: config
