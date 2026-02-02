@@ -1,4 +1,4 @@
-if SHIELD_SPLITY58_DONGLE
+if SHIELD_CENTRAL_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
@@ -6,6 +6,35 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select ZMK_WPM
+    imply ZMK_HID_INDICATORS
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+config LV_Z_VDB_SIZE
+	default 64
+    
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 16
+
+choice ST7789V_PIXEL_FORMAT
+    default ST7789V_RGB565
+endchoice
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_16
+endchoice
 
 # Set this to the number of peripherals your dongle will have.
 # For a unibody, this would be 1. If you have left and right halves, set it to 2, etc.
@@ -22,7 +51,7 @@ config BT_MAX_PAIRED
 
 endif
 
-if SHIELD_SPLITY58_LEFT || SHIELD_SPLITY58_RIGHT || SHIELD_SPLITY58_DONGLE
+if SHIELD_SPLITY58_LEFT || SHIELD_SPLITY58_RIGHT || SHIELD_CENTRAL_DONGLE
 
 config ZMK_SPLIT
     default y
