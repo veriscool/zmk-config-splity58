@@ -5,5 +5,5 @@ config SHIELD_SPLITY58_RIGHT
     def_bool $(shields_list_contains,splity58_right)
 
 config SHIELD_CENTRAL_DONGLE
-    def_bool $(shields_list_contains,central_dongle)
+    def_bool $(shields_list_contains,centeral_dongle)
   
