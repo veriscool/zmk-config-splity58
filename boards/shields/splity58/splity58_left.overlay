@@ -24,11 +24,12 @@
             ;
     }; 
 
-    &left_encoder {
-        status = "okay";
-    };
+    
 };
 
+&left_encoder {
+        status = "okay";
+    };
 
 &physical_layout_splity58 {
     kscan = <&kscan0>;
