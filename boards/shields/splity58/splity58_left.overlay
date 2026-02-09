@@ -1,7 +1,28 @@
 #include "splity58.dtsi"
 
 / {
-    kscan0: kscan0 {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_composite {
+        compatible = "zmk,kscan-composite";
+        rows = <6>;
+        columns = <6>;
+
+        // Include the matrix driver
+        matrix {
+            kscan = <&kscan1>;
+        };
+
+        // Include the direct GPIO driver...
+        direct {
+            kscan = <&kscan2>;
+            row-offset = <5>; // ...and shift it to not overlap
+        };
+    };
+
+    kscan1: kscan1 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
@@ -23,6 +44,13 @@
             , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     }; 
+
+    kscan2: kscan_dir {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            = <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
 
     
 };
