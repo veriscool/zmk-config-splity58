@@ -1,9 +1,13 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_splity58: physical_layout_splity58 {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "splity58";
+
+        kscan = <&kscan0>;
+        transform = <&matrix_transform0>;
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   50       0     0     0>
             , <&key_physical_attrs 100 100  100   37       0     0     0>
@@ -63,6 +67,7 @@
             , <&key_physical_attrs 100 100 1100  425       0     0     0>
             , <&key_physical_attrs 100 100 1200  415       0     0     0>
             , <&key_physical_attrs 100 100 1300  415       0     0     0>
+            , <&key_physical_attrs 100 100  650  112       0     0     0>
             ;
     };
 };
